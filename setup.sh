@@ -8,13 +8,13 @@
 # 4. Clone the ZotBins_Raspi Repository
 
 #(Set up Crontab files)
-echo Installing the crontab job
+echo Installing the crontab job...
 crontab mycron
 echo
 
 #(Set screen orientation)
 echo Setting the Screen Orientation to be vertical
-sudo cp config.txt /boot
+sudo cp config.txt /boot/config.txt
 echo
 
 #(Create the Folder for storing json files and data)
@@ -64,5 +64,3 @@ echo
 #(Rebooting the Pi)
 echo Rebooting the Pi...
 reboot
-
-
