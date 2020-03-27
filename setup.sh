@@ -9,6 +9,8 @@
 
 #(Set up Crontab files)
 echo Setup crontab y/n:
+cp checkwifi.sh /usr/local/bin/checkwifi.sh
+cp update.sh /usr/local/bin/update.sh
 read cronsetup
 if [ "$cronsetup" == "y" ]; then
   echo Installing the crontab job...
