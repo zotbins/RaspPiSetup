@@ -30,7 +30,7 @@ echo
 
 echo Setup json files y/n:
 read jsonsetup
-if [ "$jsonetup" == "y" ]; then
+if [ "$jsonsetup" == "y" ]; then
   #(Create the Folder for storing json files and data)
   echo Creating ZBinData folder for storing json files and data
   mkdir /home/pi/ZBinData
