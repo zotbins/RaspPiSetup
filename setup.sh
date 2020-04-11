@@ -7,12 +7,19 @@
 # 3. Clone the Digital Waste Bins Repository
 # 4. Clone the ZotBins_Raspi Repository
 
+#(Setup an Arudino IDE)
+echo Setup Ardunio y/n:
+read arduinosetup
+if [ "$arduinosetup" == "y" ]; then
+  sudo apt-get install arduino
+fi
+
 #(Set up Crontab files)
 echo Setup crontab y/n:
-cp checkwifi.sh /usr/local/bin/checkwifi.sh
-cp update.sh /usr/local/bin/update.sh
 read cronsetup
 if [ "$cronsetup" == "y" ]; then
+  cp checkwifi.sh /usr/local/bin/checkwifi.sh
+  cp update.sh /usr/local/bin/update.sh
   echo Installing the crontab job...
   crontab mycron
 fi
@@ -59,6 +66,7 @@ echo Setup animations on startup y/n:
 read startupsetup
 if [ "$startupsetup" == "y" ]; then
   echo Setting up running animations on Startup...
+  sudo apt-get install xterm -y
   mkdir /home/pi/.config/autostart
   sudo cp pythonscript.desktop /home/pi/.config/autostart
 fi
