@@ -2,7 +2,7 @@
 Version=1.0
 Name=DWBRunning
 Comment=Your comment
-Exec=xterm -hold -e `bash /home/pi/DWB/DigitalWasteBins2019/runDWB.sh`
+Exec=xterm -hold -e 'bash /home/pi/DWB/DigitalWasteBins2019/runDWB.sh'
 Path=/home/pi/
 Terminal=false
 StartupNotify=true
