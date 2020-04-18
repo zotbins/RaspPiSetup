@@ -72,6 +72,17 @@ if [ "$startupsetup" == "y" ]; then
 fi
 echo
 
+#(Set-up running ZotBins Data Collection on Startup)
+echo Setup running ZotBins Script on startup y/n:
+read startupZotBin
+if [ "$startupZotBin " == "y" ]; then
+  echo Setting up running ZotBins on Startup...
+  sudo apt-get install xterm -y
+  mkdir /home/pi/.config/autostart
+  sudo cp zotbinsScript.desktop /home/pi/.config/autostart
+fi
+echo
+
 #(Clone the Digital Waste Bins Repo)
 echo Setup up Digital Waste Bins Repo Cloning y/n:
 read dwbreposetup
