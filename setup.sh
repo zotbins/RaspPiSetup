@@ -45,9 +45,7 @@ if [ "$jsonsetup" == "y" ]; then
 
   #(Clone jsonfile into the ZBinData Folder)
   echo Copying user-specified jsonfile into the ZBinData Folder...
-  echo Hey! Input your path to jsonfile on ssh server eg. okyang@openlab.ics.uci.edu:~/*your_path*:
-  read jsonpath
-  scp $jsonpath /home/pi/ZBinData
+  python3 binData.py
 fi
 echo
 
