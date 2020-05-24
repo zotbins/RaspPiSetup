@@ -56,6 +56,7 @@ if [ "$DWBsetup" == "y" ]; then
   echo Getting dependencies for Digital Waste Bins...
   sudo apt-get update
   sudo apt-get install qt5-default pyqt5-dev
+  pip3 install playsound
 fi
 echo
 
